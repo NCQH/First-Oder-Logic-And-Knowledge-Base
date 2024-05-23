@@ -233,27 +233,22 @@ def negateAntecedent(sentence):
     return "|".join(premise)
 
 
-def getInput(filename):
-    with open(filename, "r") as file:
-        noOfQueries = int(file.readline().strip())
-        inputQueries = [file.readline().strip() for _ in range(noOfQueries)]
+def getKB(filename):
+    with open(filename, "r", encoding='utf-8') as file:
         noOfSentences = int(file.readline().strip())
         inputSentences = [file.readline().strip() for _ in range(noOfSentences)]
-        return inputQueries, inputSentences
+        return inputSentences
 
+def getQueries(filename):
+    with open(filename, "r", encoding='utf-8') as file:
+        noOfQueries = int(file.readline().strip())
+        inputQueries = [file.readline().strip() for _ in range(noOfQueries)]
+        return inputQueries
 
 def printOutput(filename, results):
     print(results)
-    with open(filename, "w") as file:
+    with open(filename, "w", encoding='utf-8') as file:
         for line in results:
             file.write(line)
             file.write("\n")
     file.close()
-
-
-if __name__ == '__main__':
-    inputQueries_, inputSentences_ = getInput("./Input/input_h.txt")
-    knowledgeBase = KB(inputSentences_)
-    knowledgeBase.prepareKB()
-    results_ = knowledgeBase.askQueries(inputQueries_)
-    printOutput("output.txt", results_)

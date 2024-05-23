@@ -1,0 +1,3 @@
+2
+Belong(G2, UEB)
+Belong(G2, VNU)

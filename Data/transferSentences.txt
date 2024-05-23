@@ -1,0 +1,10 @@
+9
+Belong(FEMA, UET)
+Belong(UET, VNU)
+Belong(x, UET) => Belong(x, VNU)
+Belong(CDT, FEMA)
+Belong(CNTT, UET)
+Belong(UEB, VNU)
+Belong(x, CNTT) => Belong(x, UET)
+Belong(x, FEMA) => Belong(x, UET)
+Belong(G2, UET)
