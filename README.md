@@ -32,8 +32,11 @@ Quá trình xây dựng cơ sở kiến thức là việc tổ chức, lưu tr�
 2. Mỗi cơ sở kiến thức có hai đối tượng sử dụng tiềm năng: người đọc và các quy trình suy luận.
 
 ## Xây dựng cơ sở tri thức và suy luận
-Mục tiêu xây dựng cơ sở tri thức bằng các câu tiếng Việt và các câu truy vấn
+Mục tiêu xây dựng cơ sở tri thức bằng các câu tiếng Việt và các câu truy vấn.
+
 Các câu thuộc cơ sở tri thức sẽ được viết từng dòng trong file KnowledgeBase.txt
+
 Sau đó các câu sẽ được chuyển sang dạng logic bằng cách sử dụng model gpt-3.5-turbo thông qua gọi API trong Tranfer.py
+
 Câu trả lời của model - tức các câu được chuyển - được lưu trong tranferSentences.txt, làm input để lưu vào cơ sở tri thức
 
